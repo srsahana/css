@@ -6,23 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Full Stack Session</title>
     <style>
-        .background{
+        *{
+            padding: 0px;
+            margin: 0px;
             box-sizing: border-box;
-            height: 100px;
-            width: 300px;
+            text-decoration: double;
+        }
+       
+        .parent{
+            height: 50vh;
+            width: 50%;
             background-color: seagreen;
-            padding-left: 100px;
-            padding-top: 50px;
-            margin-left: 3000000px;
-            
+            padding:  50px;
+        }
+        .child{
+            background-color: blueviolet;
+            height: 25vh;
+            width: 50%;
         }
        
     </style>
 </head>
 <body>
-    <div class="background">
-      <h2>leregggg</h2>
+    <div class="parent">
+      <div class="child"></div>  
     </div>
-    
 </body>
 </html>
