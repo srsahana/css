@@ -13,32 +13,32 @@
             margin: 4px;
 
         }
-        h2{
-            padding: 5px;
-            color: green;
+       
+        div.parent{
+           background-color: black;
+           min-height: 200px;
+        }
+        div.child{
+            background-color: gold;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in;
+
+        }
+        div.parent:hover div.child{
             background-color: hotpink;
-        }
-        h2:hover{
-            background-color: indigo;
-            cursor: progress;
-        }
-        div::selection{
-            background: blue;
-        }
-        input:focus{
-            background-color: blueviolet;
-        }
-        h2::before{
-          content: "ghdj";
-          font-size: 0.5rem;
-          color: blueviolet;
-          position: relative;
+            /* transform: rotateY(90deg); */
+            /* transform: scale(0.4); */
+            transform: translateX(500px);
+
         }
     </style>
 </head>
 <body>
-   <h2>I'm a heading</h2>
-   <input type="text">
-   <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos quaerat quae neque nam odit aliquam ut necessitatibus fugiat molestiae est sunt commodi iusto sit, maiores vero magni, earum a mollitia.</div>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
 </html>
