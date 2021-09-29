@@ -1,3 +1,10 @@
-var age = null
-
-console.log(typeof age)
+a=5
+b=10
+c='5'
+console.log(a+b)
+console.log(a>b)
+console.log(a<b)
+console.log(a==b)
+console.warn(a==c)
+console.warn(a===c)
+console.warn(a+c)
