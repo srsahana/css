@@ -12,6 +12,7 @@ header{
     height: 300px;
     background-size: cover;
     background-position: center;
+    position: relative;
 }
 img.social{
     width: 20px;
@@ -29,4 +30,28 @@ footer{
     bottom: 0;
     width: 100%;
 
+}
+.main{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    display: flex;
+    left: 500px;
+    top: 100px;
+    background-color: blue;
+}
+.first{
+    height: 20px;
+    width: 400px;
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div.first div{
+    width: 50px;
+    height: 20px;
+    border-radius: 10%;
+    background-color: black;
 }
