@@ -1,10 +1,6 @@
-a=5
-b=10
-c='5'
-console.log(a+b)
-console.log(a>b)
-console.log(a<b)
-console.log(a==b)
-console.warn(a==c)
-console.warn(a===c)
-console.warn(a+c)
+var heading = document.getElementById('heading')
+var para=document.getElementsByClassName('para')
+var tags = document.getElementsByTagName('a')
+var query = document.querySelector('.para')
+
+console.log(query)
