@@ -1,16 +1,14 @@
-// function greet(name='gita',age=0){
-//     console.log('Hello'+ name+ "ggggg"+age)
-// }
+var button= document.querySelector('button')
+var input= document.querySelector('input')
+var list= document.querySelector('ul')
 
-// greet('Sahana')
+const callback =(ele)=>{
+    const inputValue=input.value
+    const element=document.createElement('li')
+    const textNode=document.createTextNode(inputValue)
+    element.appendChild(textNode)
+    list.appendChild(element)
 
-// function add(a,b){
-//     var sum=a+b
-//     return sum
-// }
-
-var add = (a,b)=>{
-    var sum=a+b
-    return sum
 }
-console.log(add(40,60))
+
+button.addEventListener('click',callback)
