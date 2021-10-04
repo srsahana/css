@@ -3,9 +3,10 @@ let manu='hhhhh'
 let car={
     name:"c class",
     manu:"mer",
-    print:function (a){
+    print: ()=>{
         console.log(`${this.name} waaasssss ${this.manu}`)
 
     }
 }
-car.print()
+console.log(Object.keys(car))
+console.log(Object.values(car))
