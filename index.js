@@ -1,3 +1,3 @@
 const greet =()=>'hii'
 module.exports.greet=greet
-console.log(module)
+console.log('bbbbbbbb')
