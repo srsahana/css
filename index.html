@@ -5,25 +5,86 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Todo list</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Todo list</title>
+    <script defer src="./app.js"></script>
     <style>
        
+        
     </style>
 </head>
 
 <body>
-    <header>Todo List</header>
+    <header>
+        <div class="parent1">
+            <div>
+                <div class="parent2">
+                    <p class="child2">Todo List</p>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class ="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+
+        
+            <!-- <br> -->
+
+            <div class="parent3">
+                <div class="parent6">
+                    <input class="addtask" type="text"   placeholder="Add a task to the List..." >
+                     <button class="plus">&#65291;</button>
+                
+                
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="parent4">
+                <div class="parent5">
+                    <p class="items">items</p>
+                        <div id="unique">
+                            <p class="all">All</p>
+                            <p class="pending">Pending</p>
+                            <p class="comp">Completed</p>
+        
+                        </div>
+                    <p class="clear">Clear</p>
+                    
+
+                </div>
+            </div>
+
+            
+
+
+
+        
+        </div>
+    </header>
+    
+    
+
+    
     <footer>
         <div>
-            <a href="#">Sahana S R</a>
+            <a href="https://github.com/">Sahana S R</a>
         </div>
         <div>
-            <a href="#">
-                <img class="social" src="" alt="">
+            <a href="https://github.com/">
+               <img class="social" src="./assets/images/github.png" alt="" />
+            </a>
+            <a href="https://www.instagram.com/">
+                <img class="social" src="./assets/images/instagram.png" alt="" />
+            </a>
+            <a href="https://www.linkedin.com/">
+                <img class="social" src="./assets/images/linkedin.png" alt="" />
             </a>
         </div>
     </footer>
+    
 </body>
 
 </html>
