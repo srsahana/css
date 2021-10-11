@@ -12,5 +12,5 @@ const div = document.querySelector('div')
 const arr=[1,2,3,4]
 
 localStorage.setItem('val', JSON.stringify(arr))
-console.log((localStorage.getItem('val')))
+console.log(JSON.parse(localStorage.getItem('val')))
 
