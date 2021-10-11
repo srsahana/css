@@ -4,4 +4,8 @@ const fs =require('fs')
 //     else console.log( data)
 
 // })
-console.log(fs.readFileSync('./test.txt','utf8'))
+//console.log(fs.readFileSync('./test.txt','utf8'))
+fs.writeFile('./test.txt',"shravya dodd manga",(error)=>{
+        if(error) console.log(error)
+    
+    })
