@@ -1,20 +1,22 @@
-const express=require('express')
-const PORT=3000
-const app =express()
+const express = require('express')
+const app = express()
+const PORT = 3000
 
-const verify = (req,res,next)=>{
-    if(req.headers['user-agent']==="PostmanRuntime/7.28.4") next()
-    else res.send("BLOCKED")
-
+const Logger = (req, res, next) => {
+    console.log(req.method)
+    next()
 }
 
-app.get('/',verify,(req,res)=>{
-    res.send("VERIFIED")
-    
+app.use(Logger)
+
+app.get('/', (req, res) => {
+    res.send('Server running ')
 })
 
+app.post('/', (req, res) => {
+    res.send('Server running ')
+})
 
-
-app.listen(PORT,()=>{
-    console.log(`Server running at port ${PORT}`)
+app.listen(PORT, () => {
+    console.log(`Server started at port ${PORT}`)
 })
