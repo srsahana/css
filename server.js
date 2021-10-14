@@ -2,8 +2,10 @@ const http = require('http')
 
 const server = http.createServer((request,response)=>{
     //request.url
-    console.log(request.url)
-    console.log(request.method)
+    //console.log(request.url)
+    const path =request.url
+    response.write(`You made a request to ${path}`)
+    response.end()
 })
 
 console.log(server)
