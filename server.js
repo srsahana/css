@@ -1,10 +1,13 @@
 const http = require('http')
+const fs =require('fs')
+const path =require('path')
 
 const server = http.createServer((request,response)=>{
     //request.url
     //console.log(request.url)
-    const path =request.url
-    response.write(`You made a request to ${path}`)
+    //const path =request.url
+    const markup =fs.readFileSync(path.resolve('./index.html'))
+    response.write(markup)
     response.end()
 })
 
