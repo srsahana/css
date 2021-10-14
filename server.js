@@ -3,7 +3,7 @@ const PORT=3000
 const app =express()
 
 const verify = (req,res,next)=>{
-    if(req.headers['user-agent']==="PostmanRuntime/7.28.4") next()
+    if(req.headers['user-agent']==="Thunder Client (https://www.thunderclient.io)") next()
     else res.send("BLOCKED")
 
 }
