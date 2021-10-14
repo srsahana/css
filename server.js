@@ -20,16 +20,15 @@
 //     console.log(`Server lisening at PORT: ${3000}`)
 // })
 
+const data=[{ name:"Abc"},{ name:"Ggg"},{ name:"Jjj"}]
 
 const express = require('express')
 const app = express()
 
-app.get('/login',(req,res)=>{
-    res.send('This is LOGIN')
+app.get('/getNames',(req,res)=>{
+    res.send(data)
 })
-app.get('/signup',(req,res)=>{
-    res.send('This is SIGNUP')
-})
+
 
 
 app.listen(3000,()=>{
