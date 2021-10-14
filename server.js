@@ -2,21 +2,12 @@ const express=require('express')
 const PORT=3000
 const app =express()
 
-const isAdmin=(req,res,next)=>{
-    if(req.headers.admin==='true')next()
-    else res.send("UNAUTHORISED")
-}
+app.use(express.json())
 
-app.get('/public',(req,res)=>{
-    console.log(req.headers)
-    res.send("im a public route")
-    
+app.post('/signup',(req,res)=>{
+    console.log(req.body)
+    res.send('dada')
 })
-app.get('/private',isAdmin,(req,res)=>{
-    res.send("im a admin route")
-    
-})
-
 
 
 app.listen(PORT,()=>{
