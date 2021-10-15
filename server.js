@@ -2,19 +2,21 @@ const express = require('express')
 const app = express()
 const PORT = 3000
 
-const Logger = (req, res, next) => {
-    console.log(req.method)
-    next()
-}
+app.use(express.json())
 
-app.use(Logger)
+let products=[{name:'iPhone12 Case',price:'999'},{name:'iPhone13 Case',price:'1199'},{name:'iPhone13 pro Case',price:'1499'}]
 
-app.get('/', (req, res) => {
-    res.send('Server running ')
+//--------PUBLIC routes--------
+//GET ROUTE
+//Send all products
+app.get('/products',(req,res)=>{
+    res.json({products})
 })
 
-app.post('/', (req, res) => {
-    res.send('Server running ')
+//--------PRIVATE routes--------
+
+app.post('/products/add',(req,res)=>{
+    console.log(req.body.name)
 })
 
 app.listen(PORT, () => {
