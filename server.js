@@ -16,7 +16,15 @@ app.get('/products',(req,res)=>{
 //--------PRIVATE routes--------
 
 app.post('/products/add',(req,res)=>{
-    console.log(req.body.name)
+    const {name,price}=req.body
+    if(!name || !price) res.json({error: "Validation failed "})
+    else{
+        products.push({
+           name,
+           price,
+        })
+        res.send({products})
+    }
 })
 
 app.listen(PORT, () => {
