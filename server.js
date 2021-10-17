@@ -1,40 +1,11 @@
-const express = require('express')
-const app = express()
-const PORT = 3000
+const express=require('express')
+const app =express()
 
-app.use(express.json())
-
-let products=[{name:'iPhone12 Case',price:'999'},{name:'iPhone13 Case',price:'1199'},{name:'iPhone13 pro Case',price:'1499'}]
-
-//MiddleWares
-const validator =(req,res,next)=>{
-    const {name,price}=req.body
-    if(!name || !price) res.json({error: "Validation failed "})
-    else next()
-}
-
-
-
-
-//--------PUBLIC routes--------
-//GET ROUTE
-//Send all products
-app.get('/products',(req,res)=>{
-    res.json({products})
+app.get('/products/:categories',(req,res)=>{
+    console.log(req.params)
+    res.send("gggg")
 })
 
-//--------PRIVATE routes--------
-
-app.post('/products/add',validator,(req,res)=>{
-    const {name,price}=req.body
-    products.push({
-        name,
-        price,
-    })
-    res.send({products})
-    
-})
-
-app.listen(PORT, () => {
-    console.log(`Server started at port ${PORT}`)
+app.listen(3001,()=>{
+    console.log("Listening at port:3001")
 })
