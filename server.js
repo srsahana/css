@@ -6,6 +6,16 @@ app.use(express.json())
 
 let products=[{name:'iPhone12 Case',price:'999'},{name:'iPhone13 Case',price:'1199'},{name:'iPhone13 pro Case',price:'1499'}]
 
+//MiddleWares
+const validator =(req,res,next)=>{
+    const {name,price}=req.body
+    if(!name || !price) res.json({error: "Validation failed "})
+    else next()
+}
+
+
+
+
 //--------PUBLIC routes--------
 //GET ROUTE
 //Send all products
@@ -15,16 +25,14 @@ app.get('/products',(req,res)=>{
 
 //--------PRIVATE routes--------
 
-app.post('/products/add',(req,res)=>{
+app.post('/products/add',validator,(req,res)=>{
     const {name,price}=req.body
-    if(!name || !price) res.json({error: "Validation failed "})
-    else{
-        products.push({
-           name,
-           price,
-        })
-        res.send({products})
-    }
+    products.push({
+        name,
+        price,
+    })
+    res.send({products})
+    
 })
 
 app.listen(PORT, () => {
