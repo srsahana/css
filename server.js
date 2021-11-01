@@ -1,21 +1,16 @@
 const express=require('express')
-const database=require('./database/db')
+// const database=require('./database/db')
 const app =express()
 const categoryRoutes=require('./database/schema/routes/categoryRoutes')
+const productsRoutes=require('./database/schema/routes/productRoutes')
 
-console.log(categoryRoutes.stack)
 
 app.use(express.json())
 
 app.use('/category', categoryRoutes)
+app.use('/products', productsRoutes)
 
-app.get('/',(req,res)=>{
-    try {
-        console.log(document)
-    } catch (error) {
-        res.status(203).send(error.message)
-    }
-})
+
 
 
 app.listen(3001,()=>{
